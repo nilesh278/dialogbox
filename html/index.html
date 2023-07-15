@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+{% block title %} Dashboard {% endblock %} 
+
+{% block content %}
+
+    <div id="msg" class="col-sm-4">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong> Please report this Graphics Build Team.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+
+   <div class="wrapper">
+    <div id="myTable1" class="table-responsive"> </div>
+    <div id="myTable" class="table-responsive"> </div>
+   </div>
+    
+{% endblock %}
